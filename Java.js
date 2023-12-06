@@ -1,11 +1,5 @@
 const inquirer = require('inquirer');
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
 const questions = [
     {
         type: 'list',
@@ -28,10 +22,36 @@ const questions = [
         choices: ['English', 'Spanish', 'French', 'German'],
         default: 'Spanish'
     },
-   
+    {
+        type: 'list',
+        name: 'capitalOfGermany',
+        message: 'What is the capital of Germany?',
+        choices: ['Berlin', 'Paris', 'Rome', 'Madrid'],
+        default: 'Berlin'
+    },
+    {
+        type: 'list',
+        name: 'currencyOfSpain',
+        message: 'What is the currency of Spain?',
+        choices: ['Euro', 'Dollar', 'Pound', 'Yen'],
+        default: 'Euro'
+    },
+    {
+        type: 'list',
+        name: 'languageOfItaly',
+        message: 'What is the official language of Italy?',
+        choices: ['English', 'Italian', 'French', 'Spanish'],
+        default: 'Italian'
+    },
+    {
+        type: 'list',
+        name: 'capitalOfSpain',
+        message: 'What is the capital of Spain?',
+        choices: ['Berlin', 'London', 'Paris', 'Madrid'],
+        default: 'Madrid'
+    },
 ];
 
-shuffleArray(questions);
 
 inquirer.prompt(questions)
     .then((answers) => {
@@ -40,4 +60,3 @@ inquirer.prompt(questions)
     .catch((error) => {
         console.error('Error occurred:', error);
     });
-    
