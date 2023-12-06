@@ -1,7 +1,7 @@
 {
-    "name": "questions",
+    "name": "questions2",
     "version": "1.0.0",
-    "description": "questions",
+    "description": "questions2",
     "main": "main.js",
     "type": "module",
     "scripts": {
